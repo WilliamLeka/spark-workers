@@ -6,10 +6,10 @@ import json
 app = Flask(__name__)
 
 def get_api_key() -> str:
-    secret = os.environ.get("COMPUTER_API_KEY")
-    if secret:
-        return secret
-    else:
+    # secret = os.environ.get("COMPUTER_API_KEY")
+    # if secret:
+    #     return secret
+    # else:
         #local testing
         with open('.key') as f:
             return f.read()
