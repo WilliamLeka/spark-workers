@@ -25,12 +25,11 @@ def test():
 @app.route("/add",methods=['GET','POST'])
 def add():
   if request.method=='GET':
-    return "Use post to add" # replace with form template
+      return render_template('form.html')
   else:
-    token=access_secret_version('COMPUTER_API_KEY')
+    token=access_secret_version("api")
     ret = addWorker(token,request.form['num'])
     return ret
-
 
 def addWorker(token, num):
     with open('payload.json') as p:
