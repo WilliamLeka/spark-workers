@@ -6,6 +6,7 @@ import json
 from google.cloud import secretmanager
 app = Flask(__name__)
 
+
 def access_secret_version(secret_id, version_id="latest"):
     client = secretmanager.SecretManagerServiceClient()
     name = f"projects/493602314266/secrets/{secret_id}/versions/{version_id}"
