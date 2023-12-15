@@ -3,7 +3,7 @@ from flask import request
 import requests
 import os
 import json
-import google.cloud import secretmanager
+from google.cloud import secretmanager
 app = Flask(__name__)
 
 def access_secret_version(secret_id, version_id="latest"):
